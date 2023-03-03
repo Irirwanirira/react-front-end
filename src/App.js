@@ -1,13 +1,28 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Greeting from './Greeting';
+import Greeting from './component/Greeting';
+import Header from './component/Header';
+import Home from './component/Home';
+import './App.css';
 
 const App = () => (
-  <div>
+  <>
+    <Header />
     <Routes>
-      <Route path="/greeting" element={<Greeting />} />
+      <Route
+        path="/"
+        element={(
+          <Home />
+        )}
+      />
+      <Route
+        path="/greeting"
+        element={(
+          <Greeting />
+        )}
+      />
     </Routes>
-  </div>
+  </>
 );
 
 export default App;
